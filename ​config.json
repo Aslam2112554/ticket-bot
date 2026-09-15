@@ -1,0 +1,10 @@
+{
+  "STAFF_ROLE_ID": 1549408213630328842,
+  "PANEL_CHANNEL_ID": 1549396609413021708,
+  "CATEGORY_ID": null,
+  "BUTTON_LABEL": "فتح تذكرة",
+  "EMBED_TITLE": "نظام التذاكر والدعم الفني",
+  "EMBED_DESCRIPTION": "اضغط على الزر بالأسفل لفتح تذكرة جديدة والتواصل مع الإدارة.",
+  "TICKET_PREFIX": "ticket-",
+  "CLOSE_BUTTON_LABEL": "إغلاق التذكرة"
+}
