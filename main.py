@@ -4,6 +4,22 @@ import asyncio
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+from threading import Thread
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+def run():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
 
 # تحميل الإعدادات والتوكن
 load_dotenv()
@@ -113,4 +129,5 @@ async def setup_tickets(ctx):
     await ctx.send(f"تم إرسال لوحة التذاكر إلى {target_channel.mention} بنجاح.")
 
 if __name__ == "__main__":
+    keep_alive()
     bot.run(TOKEN)
